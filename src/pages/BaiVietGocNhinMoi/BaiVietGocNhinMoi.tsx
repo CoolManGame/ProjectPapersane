@@ -4,12 +4,15 @@ import { Link, useParams } from "react-router-dom"
 import Header from "../../Bookflix-Components/Header/Header"
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
 import readJsonFile from "../../store/readJsonFile"
+import matter from "gray-matter";
 
 import { gsap } from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 import readTextFile from "../../store/readTextFile"
 import ArticleTxtToComponents from "./components/ArticleTxtToComponents"
 import calcLerp from "../../store/calcLerp"
+
+import RenderMarkdown from "./components/RenderMarkdown"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -21,6 +24,7 @@ function BaiVietGocNhinMoi() {
   const [articlePublishDate, setArticlePublishDate] = useState("")
   const [articleAvatarURL, setArticleAvatarURL] = useState("")
   const [articleParts, setArticleParts] = useState<string[]>([])
+  const [articleContent, setArticleContent] = useState<string>("");
   const [scrollHeightState, setScrollHeightState] = useState(document.documentElement.scrollHeight)
 
   const boxNeedsPinning = useRef(null)
@@ -53,16 +57,20 @@ function BaiVietGocNhinMoi() {
 
   // fetch data
   useEffect(() => {
-    readJsonFile(`/GocNhinMoi-articles/${articleId}/info.json`).then((data) => {
-      setArticleTitle(data["title"])
-      setArticleAuthor(data["author"])
-      const publishDateSplitted = data["publishdate"].split("-")
+    readTextFile(`/GocNhinMoi/content/${articleId}.md`).then((data) => {
+      const matterResult = matter(data);
+      setArticleTitle(matterResult.data.title);
+      setArticleAuthor(matterResult.data.author);
+      const publishDateSplitted = matterResult.data.publishdate.split("-");
       setArticlePublishDate(`${publishDateSplitted[2]}/${publishDateSplitted[1]}/${publishDateSplitted[0]}`)
+      setArticleContent(matterResult.content);
     })
-    readTextFile(`/GocNhinMoi-articles/${articleId}/Article.txt`).then((data) => {
-      setArticleParts(data.split(/\r?\n/).filter((str) => str.length > 0))
-    })
-    setArticleAvatarURL(`/GocNhinMoi-articles/${articleId}/images/articleCover.jpg`)
+
+    // readTextFile(`/GocNhinMoi-articles/${articleId}/Article.txt`).then((data) => {
+    //   setArticleParts(data.split(/\r?\n/).filter((str) => str.length > 0))
+    // })
+
+    setArticleAvatarURL(`/GocNhinMoi/images/${articleId}/articleCover.jpg`)
   }, [])
 
   // scrolltrigger to make góc nhìn mới stay pin
@@ -137,7 +145,8 @@ function BaiVietGocNhinMoi() {
           <Box bgcolor="rgb(174, 170, 166)" height={4} my={3}></Box>
 
           <Box bgcolor=" white" p={3} display="flex" flexDirection="column" gap={3}>
-            <ArticleTxtToComponents articleParts={articleParts} />
+            <RenderMarkdown>{articleContent}</RenderMarkdown>
+            {/* <ArticleTxtToComponents articleParts={articleParts} /> */}
           </Box>
         </Box>
       </Box>

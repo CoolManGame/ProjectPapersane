@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Box, Button, Grid, Rating, Typography } from "@mui/material"
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
+import matter from "gray-matter";
+import Markdown from 'react-markdown'
 
 import Header from "../../Bookflix-Components/Header/Header"
 import { Notfound } from "../../pages"
@@ -21,23 +23,27 @@ const BookInfo = () => {
   const [bookAuthor, setBookAuthor] = useState("")
   const [bookPublishYear, setBookPublishYear] = useState("")
   const [bookReviewParagraphs, setBookReviewParagraphs] = useState<string[]>([])
+  const [bookReview, setBookReview] = useState("")
   const [bookGenres, setBookGenres] = useState<string[]>([])
   const [bookRating, setBookRating] = useState(0)
 
   useEffect(() => {
-    readJsonFile(`/bookflix-searchable-book-info/${bookId}/info.json`).then((infoJson) => {
-      setBookTitle(infoJson["title"].toUpperCase())
-      setBookGenres(infoJson["genres"])
-      setBookPublishYear(infoJson["publishdate"])
-      setBookAuthor(infoJson["author"])
-      setBookRating(parseFloat(infoJson["rating"]))
-      console.log(infoJson)
+    readTextFile(`/bookflix-searchable-book-info/${bookId}.md`).then((data) => {
+      console.log(data)
+      const matterResult = matter(data);
+      console.log(matterResult)
+      setBookTitle(matterResult.data.title.toUpperCase())
+      setBookGenres(matterResult.data.genres)
+      setBookPublishYear(matterResult.data.publishyear)
+      setBookAuthor(matterResult.data.author)
+      setBookRating(parseFloat(matterResult.data.rating))
+      setBookReview(matterResult.content)
     })
 
-    readTextFile(`/bookflix-searchable-book-info/${bookId}/review.txt`).then((data) => {
-      // Split with all kinds of "newline" character (according to ChatGPT, there are many, like \r \n idk)
-      setBookReviewParagraphs(data.split(/\r\n|\r|\n/g))
-    })
+    // readTextFile(`/bookflix-searchable-book-info/${bookId}/review.txt`).then((data) => {
+    //   // Split with all kinds of "newline" character (according to ChatGPT, there are many, like \r \n idk)
+    //   setBookReviewParagraphs(data.split(/\r\n|\r|\n/g))
+    // })
   }, [])
 
   return (
@@ -157,13 +163,15 @@ const BookInfo = () => {
             <img src="\bookflix-ui-pics\SummaryIcon.png" />
           </Box>
           <Box>
-            <Typography variant="subtitle1" color="black" fontFamily="var(--review-font-bookflix)" fontSize={{ xs: 15, sm: 15, md: 18, lg: 22 }}>
+            <Markdown>{bookReview}</Markdown>
+            {/* <Typography variant="subtitle1" color="black" fontFamily="var(--review-font-bookflix)" fontSize={{ xs: 15, sm: 15, md: 18, lg: 22 }}>
+              {bookReview}
               {bookReviewParagraphs.map((para) => (
                 <React.Fragment key={para}>
                   {para} <br /> <br />
                 </React.Fragment>
               ))}
-            </Typography>
+            </Typography> */}
           </Box>
         </Box>
       </Box>

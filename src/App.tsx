@@ -5,6 +5,12 @@ import { publicRoutes } from './routes'
 import Landing from './pages/Landing/Landing';
 import "./App.css";
 import { gsap } from 'gsap';
+
+import {Buffer} from 'buffer';
+
+// @ts-ignore
+window.Buffer = Buffer;
+
 function App() {
   // useEffect(() => {
   //   var t1 = gsap.timeline();
