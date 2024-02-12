@@ -7,7 +7,7 @@ description: Đã bao giờ các bạn nhìn thấy một thông tin thú
 
 Đã bao giờ các bạn nhìn thấy một thông tin thú vị, một câu nói cực “chất” của nhân vật nào đó khiến bạn muốn “save as” vào đầu ngay nhưng lại quên “sạch” sau khi đọc xong quyển sách chưa? Hay có khi nào bạn muốn trích dẫn điều gì đó từ sách nhưng không thể nhớ được đầy đủ nội dung cần thiết cũng như không biết nên tìm lại ở đâu không? Nếu đúng là vậy thì Papersane chúng mình sẽ “ra tay” với một vài mẹo hay trong bài viết này để các bạn có thể ghi chú một cách hiệu quả hơn. Chúng ta hãy bắt đầu thôi nào!
 
-![ChacCuNoiDungGhiChu](/GocNhinMoi/images/CachGhiChuKhiDocSach/1.jpg)
+![ChacCuNoiDungGhiChu](/bookflix/GocNhinMoi/images/CachGhiChuKhiDocSach/1.jpg)
 
 # 1. “Chắc cú” nội dung ghi chú 💪
 

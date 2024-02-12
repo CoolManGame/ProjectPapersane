@@ -1,4 +1,4 @@
-// used to read .txt files
+// used to read text files
 async function readTextFile(filePath: string) {
   try {
     const response = await fetch(filePath)
