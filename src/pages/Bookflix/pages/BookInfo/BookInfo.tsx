@@ -2,16 +2,14 @@ import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Box, Button, Grid, Rating, Typography } from "@mui/material"
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
-import matter from "gray-matter";
-import Markdown from 'react-markdown'
+import Markdown from "react-markdown"
 
 import Header from "../../components/Header/Header"
 import { Notfound } from "../../../"
-import { BookIds } from "../../../../store/bookflix/BookIds";
-import readTextFile from "../../../../store/readTextFile"
-import { getBook } from "../../components/getBook";
+import { BookIds } from "../../../../store/bookflix/BookIds"
+import { getBook } from "../../components/getBook"
 
-const CONTENT_PATH = `/bookflix/book-info/content`;
+const CONTENT_PATH = `/bookflix/book-info/content`
 
 const BookInfo = () => {
   const { bookId } = useParams()
@@ -156,15 +154,20 @@ const BookInfo = () => {
             <img src="\bookflix-ui-pics\SummaryIcon.png" />
           </Box>
           <Box>
-            <Markdown>{bookReview}</Markdown>
-            {/* <Typography variant="subtitle1" color="black" fontFamily="var(--review-font-bookflix)" fontSize={{ xs: 15, sm: 15, md: 18, lg: 22 }}>
+            <Markdown
+              components={{
+                p: (props) => {
+                  const { children, ...rest } = props
+                  return (
+                    <Typography variant="subtitle1" paragraph fontFamily="var(--review-font-bookflix)" fontSize={{ xs: 15, sm: 15, md: 18, lg: 22 }}>
+                      {children}
+                    </Typography>
+                  )
+                },
+              }}
+            >
               {bookReview}
-              {bookReviewParagraphs.map((para) => (
-                <React.Fragment key={para}>
-                  {para} <br /> <br />
-                </React.Fragment>
-              ))}
-            </Typography> */}
+            </Markdown>
           </Box>
         </Box>
       </Box>
