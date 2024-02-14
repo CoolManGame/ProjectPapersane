@@ -9,37 +9,37 @@ description: Mùa thi lại một lần nữa đến gần và các thành viên
 
 Mùa thi lại một lần nữa đến gần và các thành viên nhà “mọt” lại đang “vùi mình” trong deadline và chồng đề cương? Bạn đang lo lắng, stress và chán nản? Đừng lo! Giờ chính là lúc bạn nên tạm gác qua phiền muộn để thả cảm xúc của mình trôi theo những cuốn sách rồi đấy! Mỗi chi tiết, mỗi câu chuyện trong từng quyển sách đều đem lại cho chúng mình những cảm xúc khác nhau, đôi khi chân thật như chính ta đang sống cuộc đời của một nhân vật nào đó, bởi thế George R.R Martin mới có câu “Một người hay đọc sách sống hàng ngàn cuộc đời khác nhau.” Sau một ngày dài còn gì tuyệt vời hơn khi ngồi “gặm nhấm” từng trang sách một và tận hưởng từng cung bậc cảm xúc mà những con chữ, dòng văn mang lại. Những cung bậc cảm xúc ấy là gì, “hội mọt” hãy cùng Papersane tìm hiểu ngay sau đây nhé!
 
-![PlotTwistQuaChayDoiMuLienTay](/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/1.jpg)
+![PlotTwistQuaChayDoiMuLienTay](/bookflix/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/1.jpg)
 
 # 🚨 PLOT TWIST QUÁ CHÁY, ĐỘI MŨ LIỀN TAY 🚨
 
 Đọc sách là cách để thoả sức bay bổng cùng trí tưởng tượng, vậy nên vừa đọc vừa dự đoán những diễn biến tiếp theo hẳn là thói quen không của riêng ai. Nhưng sách cũng như cuộc đời, mà đường đời thì đâu bao giờ bằng phẳng bạn nhỉ? Câu chuyện đang êm đềm tưởng chừng sắp có cái kết đẹp, rồi nhân vật mới xuất hiện, mạch cảm xúc mỗi nhân vật đều thay đổi làm bối cảnh tác phẩm đảo ngược, chắc chắn đến cả các dân “mọt” lâu năm cũng phải ngỡ ngàng vì những “khúc cua mượt” này!
 
-![TuongLaHapDanNaoNgoHutHang](/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/2.jpg)
+![TuongLaHapDanNaoNgoHutHang](/bookflix/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/2.jpg)
 
 # 😶‍🌫️ TƯỞNG LÀ HẤP DẪN, NÀO NGỜ HỤT HẪNG 😶‍🌫️
 
 Bạn đã bao giờ chọn mua một quyển sách được đánh giá cao, nhưng sau khi tự mình trải nghiệm thì tâm trí bạn bị lấp đầy bởi những hoài nghi liệu rằng vấn đề là ở mình hay ở quyển sách? Đừng lo, bạn không cô đơn đâu! Truyền thông giúp nhà “mọt” chúng mình dễ dàng tìm kiếm “người bạn” đúng gu, nhưng đôi khi những sản phẩm rất đỗi bình thường qua lăng kính phóng đại của truyền thông lại trở nên tuyệt hảo, từ đó dễ gây ra sự hụt hẫng cho độc giả. Vì vậy, nhớ chọn sách cẩn thận như chọn bạn mà chơi, bạn nhé!
 
-![AnhMatChamNhanVatYeuThichTimLienDapThinhThich](/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/3.jpg)
+![AnhMatChamNhanVatYeuThichTimLienDapThinhThich](/bookflix/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/3.jpg)
 
 # 💖 ÁNH MẮT CHẠM NHÂN VẬT YÊU THÍCH, TIM LIỀN ĐẬP THÌNH THỊCH 💖
 
 Hẳn ai trong chúng ta khi đọc sách cũng mong thấy được nhân vật có cùng hoàn cảnh, nội tâm với mình để đồng cảm, sẻ chia. Hoặc đôi khi ta chỉ đơn giản tìm kiếm một người bù đắp những khuyết điểm của mình để có hình mẫu mà ngưỡng mộ và noi theo. Thú thật đi, bạn đã bao giờ “lọt hố” một nhân vật hư cấu, rồi miệng bất giác mỉm cười, tim như đập loạn nhịp mỗi lần bóng dáng nhân vật ấy xuất hiện chưa nè?
 
-![MoiRuotBienMatMotNhuKhocNac](/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/4.jpg)
+![MoiRuotBienMatMotNhuKhocNac](/bookflix/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/4.jpg)
 
 # ☔️ "MỐI RUỘT” BIẾN MẤT, “MỌT” NHƯ KHÓC NẤC ☔️
 
 Nhưng đời không như là mơ, khi mà tác giả nắm trong tay “quyền sinh sát”. Thử tưởng tượng bạn đang dồn hết tâm huyết “cày” một bộ truyện, rồi nhân vật “ruột” đột ngột đăng xuất khỏi mạch truyện… Lúc ấy chắc hẳn thế giới như sụp đổ trước mắt, không hơn không kém! Bởi vậy mang danh là đọc sách cho khuây khoả, giải trí mà giải trí này nó lạ lắm, gặp mấy tác giả chẳng chiều lòng độc giả thì nhà “mọt” tụi mình cũng khổ tâm lắm chứ!
 
-![ThayQuoteChiLyNoteLaiLienDi](/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/5.jpg)
+![ThayQuoteChiLyNoteLaiLienDi](/bookflix/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/5.jpg)
 
 # ✍🏻 THẤY QUOTE CHÍ LÝ, NOTE LẠI LIỀN ĐI ✍🏻
 
 Dù cốt truyện có hợp gu hay không thì cũng không thể phủ nhận mỗi quyển sách đều cho chúng ta những “aha” moments.. Bạn còn nhớ bài đăng xinh xinh mà Papersane đã hướng dẫn bạn cách ghi chú khi đọc sách chứ? Đây là lúc để thực hành nè! Không chỉ dừng lại ở những câu nói làm tim bạn “rung rinh”, bạn cũng có thể highlight và note lại những chi tiết mà mình tâm đắc để sau này cần có thể dễ dàng tìm lại nè.
 
-![TacGiaSoHoLaKetMoTamHonMotNganNgo](/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/6.jpg)
+![TacGiaSoHoLaKetMoTamHonMotNganNgo](/bookflix/GocNhinMoi/images/VuotVuMonCungNhaMotNgay1/6.jpg)
 
 # ⛅️ TÁC GIẢ SƠ HỞ LÀ KẾT MỞ, TÂM HỒN “MỌT” NGẨN NGƠ ⛅️
 

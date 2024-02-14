@@ -7,13 +7,13 @@ description: Sau thời gian dài chống dịch bệnh COVID-19 thì ắt hẳn
 
 Sau thời gian dài chống dịch bệnh COVID-19 thì ắt hẳn nhiều bạn đã dần e ngại ra ngoài đường và đánh mất thói quen ra nhà sách đúng không nhỉ? Papersane cũng như bạn, ở nhà mà thèm được ngắm nghía những kệ sách đồ sộ và mân mê từng quyển sách mới. Tuy nhiên, thua keo này thì ta bày keo khác. Hãy cùng Papersane tìm hiểu về một nguồn “lương thực” cứu đói cho các “mọt” mang tên sách điện tử, với nhiều ưu điểm không kém cạnh gì so với sách giấy truyền thống đâu nhé!
 
-![VaySachDienTuLaGi](/GocNhinMoi/images/HuongDanGamNhamSachDienTuChoCacMot/1.jpg)
+![VaySachDienTuLaGi](/bookflix/GocNhinMoi/images/HuongDanGamNhamSachDienTuChoCacMot/1.jpg)
 
 # 🤔 Vậy sách điện tử là gì?
 
 – Sách điện tử là phiên bản kỹ thuật số của các quyển sách được xuất bản để có thể đọc được qua các thiết bị điện tử như điện thoại, máy tính bảng, máy vi tính, thiết bị đọc sách chuyên dụng,...
 
-![SachDienTuMangLaiNhungLoiIchGi](/GocNhinMoi/images/HuongDanGamNhamSachDienTuChoCacMot/2.jpg)
+![SachDienTuMangLaiNhungLoiIchGi](/bookflix/GocNhinMoi/images/HuongDanGamNhamSachDienTuChoCacMot/2.jpg)
 
 # 🤔 Sách điện tử mang lại những lợi ích gì?
 
@@ -22,7 +22,7 @@ Sau thời gian dài chống dịch bệnh COVID-19 thì ắt hẳn nhiều bạ
 – Thực hiện giao dịch trực tuyến (quá phù hợp cho những tình huống như vầy đúng không nè?), một vài đầu sách được phát hành miễn phí, giúp các bạn tận hưởng sách mà không cần tốn quá nhiều tiền.  
 – Không lo bị hư sách, bị “quái mọt” ăn, bị ố vàng,... vì sách nằm trong thiết bị điện tử hết rồi 😜
 
-![VayDocSachDienTuODauChoChatLuongThe](/GocNhinMoi/images/HuongDanGamNhamSachDienTuChoCacMot/3.jpg)
+![VayDocSachDienTuODauChoChatLuongThe](/bookflix/GocNhinMoi/images/HuongDanGamNhamSachDienTuChoCacMot/3.jpg)
 
 # 🤔 Vậy đọc sách điện tử ở đâu cho chất lượng thế?
 
@@ -34,7 +34,7 @@ Sau thời gian dài chống dịch bệnh COVID-19 thì ắt hẳn nhiều bạ
 – Project Gutenberg: Trang web miễn phí với nhiều đầu sách cũ bằng tiếng Anh (phù hợp cho các bạn đang trau dồi vốn tiếng Anh).  
 🔥Đặc biệt nhất chính là thư viện số thông minh của Trần Chuyên chúng ta với gần 11 nghìn đầu sách điện tử, bao gồm nhiều tác phẩm văn học trong nước và quốc tế cùng với nhiều đầu sách tham khảo cho những “mọt” chăm học nữa đó!
 
-![CanLuuYDieuGiKhiDocSachDienTu](/GocNhinMoi/images/HuongDanGamNhamSachDienTuChoCacMot/4.jpg)
+![CanLuuYDieuGiKhiDocSachDienTu](/bookflix/GocNhinMoi/images/HuongDanGamNhamSachDienTuChoCacMot/4.jpg)
 
 # 🤔 Cần lưu ý điều gì khi đọc sách điện tử?
 

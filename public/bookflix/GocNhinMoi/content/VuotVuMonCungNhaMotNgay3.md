@@ -12,7 +12,7 @@ description: 📖 Đọc sách vốn là hoạt động để trau dồi tri th�
 
 🍀 Trong không khí căng thẳng của mùa thi Học kỳ 1, Papersane mong rằng với những tips này, các bạn “mọt” có thể tự tin “vượt vũ môn” và gặt hái thật nhiều hoa điểm 10. Câu lạc bộ Sách Papersane chúc các bạn “mot” sẽ luôn giữ vững tinh thần, ôn tập thật tốt và có một mùa thi thật thành công với số điểm như ý nhé!
 
-![KyNangScanVanBan](/GocNhinMoi/images/VuotVuMonCungNhaMotNgay3/1.jpg)
+![KyNangScanVanBan](/bookflix/GocNhinMoi/images/VuotVuMonCungNhaMotNgay3/1.jpg)
 
 # 1. Kỹ năng scan văn bản
 
@@ -21,7 +21,7 @@ description: 📖 Đọc sách vốn là hoạt động để trau dồi tri th�
 
 Mỗi khi đi thi, hay dù chỉ là những phút ôn tập trước thềm kiểm tra, có lẽ chúng ta đều như hoa cả mắt khi nhìn vào các văn bản Tiếng Việt dài ngoằng với hàng tá chữ. Nhưng bạn đừng lo lắng, vì đọc sách đã đem đến cho ta một kỹ năng vô cùng hữu ích để giải mã vấn đề này, đó chính là kĩ năng “scan văn bản”. Trước một quyển sách hàng ngàn trang, mọt thường sử dụng kĩ năng đọc lướt, đọc nhanh nhưng vẫn nắm rõ nội dung, kĩ năng này mà áp dụng vào các bài kiểm tra, như đọc đề thi các môn, làm bài Tiếng Việt thì quá là hợp lý luôn đúng không nào?
 
-![KyNangGhiChu](/GocNhinMoi/images/VuotVuMonCungNhaMotNgay3/2.jpg)
+![KyNangGhiChu](/bookflix/GocNhinMoi/images/VuotVuMonCungNhaMotNgay3/2.jpg)
 
 # 2. Kỹ năng ghi chú
 
@@ -29,7 +29,7 @@ Mỗi khi đi thi, hay dù chỉ là những phút ôn tập trước thềm ki�
 
 Mỗi khi đọc sách, khi gặp những chi tiết, hay những câu nói hay của tác giả mà ta vô cùng tâm đắc, Nhà Mọt thường sẽ ghi chú, hay đánh dấu lại để mình nhớ mãi không quên. Tương tự mỗi khi kiểm tra, kĩ năng này sẽ là chiếc chìa khóa vạn năng, giúp các bạn mở ra cánh cửa 10 điểm Văn bởi khả năng ghi chú những thông tin quan trọng khi xử lí một văn bản quá nhiều chi tiết đó.
 
-![KyNangTimSachThanThanh](/GocNhinMoi/images/VuotVuMonCungNhaMotNgay3/3.jpg)
+![KyNangTimSachThanThanh](/bookflix/GocNhinMoi/images/VuotVuMonCungNhaMotNgay3/3.jpg)
 
 # 3. Kỹ năng tìm sách thần thánh
 
@@ -37,7 +37,7 @@ Mỗi khi đọc sách, khi gặp những chi tiết, hay những câu nói hay 
 
 Mỗi khi bước vào thiên đường rộng lớn mang tên nhà sách, Mọt không cần phải loay hoay, vì chúng mình đã nắm được kỹ năng tìm ra đâu là “chân ái” nhờ vào kinh nghiệm đọc sách, lựa sách. “Quyển nào bìa đẹp thì mua” hay “Cứ tên hay thì nội dung sẽ hay thôi” ư, đó không phải cách chúng mình sử dụng. Nhà Mọt nắm được kỹ năng đọc lướt nội dung, cũng như cách xem mục lục để chọn ra đâu là sách hay. Kỹ năng này chắc chắn sẽ giúp ích cho các bạn mỗi khi muốn tìm tài liệu hay đề cương tham khảo cho các môn học đó!
 
-![KyNangTapTrungCaoDo](/GocNhinMoi/images/VuotVuMonCungNhaMotNgay3/4.jpg)
+![KyNangTapTrungCaoDo](/bookflix/GocNhinMoi/images/VuotVuMonCungNhaMotNgay3/4.jpg)
 
 # 4. Kỹ năng tập trung cao độ
 

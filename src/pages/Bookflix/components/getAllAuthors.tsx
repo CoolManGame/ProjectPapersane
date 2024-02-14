@@ -1,6 +1,3 @@
-import { Book } from "src/pages/Bookflix/components/Book"
-import readTextFile from "src/store/readTextFile"
-
 import { BookIds } from "../../../store/bookflix/BookIds"
 import { getBook } from "./getBook"
 

@@ -9,7 +9,7 @@ import { Notfound } from "../../../"
 import { BookIds } from "../../../../store/bookflix/BookIds"
 import { getBook } from "../../components/getBook"
 
-const CONTENT_PATH = `/bookflix/book-info/content`
+const BOOK_INFO_PATH = `/bookflix/book-info`
 
 const BookInfo = () => {
   const { bookId } = useParams()
@@ -21,7 +21,6 @@ const BookInfo = () => {
   const [bookTitle, setBookTitle] = useState("")
   const [bookAuthor, setBookAuthor] = useState("")
   const [bookPublishYear, setBookPublishYear] = useState("")
-  const [bookReviewParagraphs, setBookReviewParagraphs] = useState<string[]>([])
   const [bookReview, setBookReview] = useState("")
   const [bookGenres, setBookGenres] = useState<string[]>([])
   const [bookRating, setBookRating] = useState(0)
@@ -63,7 +62,7 @@ const BookInfo = () => {
           {/* Book cover */}
           <Grid item xs={10} md={4}>
             <Box width={{ xs: "100%", md: "80%" }}>
-              <img src={`/bookflix-searchable-book-info/${bookId}/cover.png`} style={{ width: "100%", objectFit: "contain" }} />
+              <img src={`${BOOK_INFO_PATH}/cover/${bookId}.png`} style={{ width: "100%", objectFit: "contain" }} />
             </Box>
           </Grid>
 
@@ -151,7 +150,7 @@ const BookInfo = () => {
           bgcolor="white"
         >
           <Box minWidth={{ xs: 200 }} maxWidth={{ xs: 100, md: 200 }}>
-            <img src="\bookflix-ui-pics\SummaryIcon.png" />
+            <img src="/bookflix/ui-pics/SummaryIcon.png" />
           </Box>
           <Box>
             <Markdown

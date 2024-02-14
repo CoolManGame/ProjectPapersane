@@ -48,7 +48,7 @@ function GocNhinMoi() {
         <Hidden mdDown>
           <Box flexBasis="30%" alignSelf="flex-start" justifyContent="flex-end" display="flex">
             <Box>
-              <img src="/bookflix-ui-pics/FillerPic_GocNhinMoi.png" />
+              <img src="/bookflix/ui-pics/FillerPic_GocNhinMoi.png" />
             </Box>
           </Box>
         </Hidden>
