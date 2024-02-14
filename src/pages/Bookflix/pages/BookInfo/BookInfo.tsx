@@ -158,7 +158,7 @@ const BookInfo = () => {
                 p: (props) => {
                   const { children, ...rest } = props
                   return (
-                    <Typography variant="subtitle1" paragraph fontFamily="var(--review-font-bookflix)" fontSize={{ xs: 15, sm: 15, md: 18, lg: 22 }}>
+                    <Typography variant="subtitle1" paragraph color="black" fontFamily="var(--review-font-bookflix)" fontSize={{ xs: 15, sm: 15, md: 18, lg: 22 }}>
                       {children}
                     </Typography>
                   )
