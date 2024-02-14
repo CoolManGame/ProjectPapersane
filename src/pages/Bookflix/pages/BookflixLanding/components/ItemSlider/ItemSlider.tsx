@@ -38,7 +38,7 @@ const ItemSlider = ({ ids, cardColor, forBook }: { ids: string[]; cardColor: str
   useEffect(() => {
     ids.forEach((id) => {
       ;(forBook ? getBook(id) : getArticle(id)).then((item) => {
-        setInfo((oldInfo) => [...oldInfo, item])
+        setInfo((oldInfo) => oldInfo.some((itemIn) => itemIn.id == item.id) ? oldInfo : [...oldInfo, item])
       })
     })
   }, [])

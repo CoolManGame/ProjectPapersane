@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Typography, Button, Box, Grid } from "@mui/material"
 import Header from "../../components/Header/Header"
-import BookSlider from "./components/BookSlider/BookSlider"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper"
 import "swiper/css"
@@ -11,8 +10,8 @@ import { BookIds } from "../../../../store/bookflix/BookIds"
 import { GocNhinMoiArticleIds } from "../../../../store/bookflix/GocNhinMoiArticleIds"
 
 import readTextFile from "../../../../store/readTextFile"
-import BookSliderBox from "./components/BookSliderBox/BookSliderBox"
-import ItemSlider from "./components/BookSlider/BookSlider"
+import BookSliderBox from "./components/ItemSliderBox/ItemSliderBox"
+import ItemSlider from "./components/ItemSlider/ItemSlider"
 
 function BookflixLanding() {
   const bookCoversSurpriseMe = BookIds.map((id) => `/bookflix/book-info/cover/${id}.png`)

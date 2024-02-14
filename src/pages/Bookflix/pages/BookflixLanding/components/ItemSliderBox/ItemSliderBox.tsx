@@ -5,7 +5,7 @@ interface Prop {
   BookSliderComponent: React.ReactNode
 }
 
-const BookSliderBox = ({ title, BookSliderComponent }: Prop) => {
+const ItemSliderBox = ({ title, BookSliderComponent }: Prop) => {
   return (
     <Box p={2} ml={5} mr={5} mt={7}>
       <Typography
@@ -25,4 +25,4 @@ const BookSliderBox = ({ title, BookSliderComponent }: Prop) => {
   )
 }
 
-export default BookSliderBox
+export default ItemSliderBox

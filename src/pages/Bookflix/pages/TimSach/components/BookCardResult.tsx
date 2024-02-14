@@ -2,7 +2,7 @@ import { Card, CardMedia, CardContent, Typography, Rating, Button } from "@mui/m
 import { Link } from "react-router-dom"
 import { Book } from "../../../components/Book"
 
-const BookCardResult = ({ bookInfo }: { bookInfo: Book }) => {
+const BookCardResult = ({ book }: { book: Book }) => {
   return (
     <Card
       sx={{
@@ -14,17 +14,17 @@ const BookCardResult = ({ bookInfo }: { bookInfo: Book }) => {
         marginTop: 5,
       }}
     >
-      <CardMedia component="img" sx={{ width: { xs: "100%", sm: 150 }, objectFit: "cover" }} image={bookInfo.coverUrl} alt="Image" />
+      <CardMedia component="img" sx={{ width: { xs: "100%", sm: 150 }, objectFit: "cover" }} image={book.coverUrl} alt="Image" />
       <CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
         <Typography variant="h6" fontSize={{ xs: 30, lg: 30 }} fontWeight="bold" fontFamily="var(--body-font-bookflix)">
-          {bookInfo.title}
+          {book.title}
         </Typography>
         <Typography variant="subtitle1" color="text.secondary" fontSize={{ xs: 20, lg: 20 }} fontFamily="var(--body-font-bookflix)">
-          bởi {bookInfo.author}
+          bởi {book.author}
         </Typography>
 
         <Rating
-          defaultValue={bookInfo.rating}
+          defaultValue={book.rating}
           precision={0.5}
           readOnly
           sx={{
@@ -34,7 +34,7 @@ const BookCardResult = ({ bookInfo }: { bookInfo: Book }) => {
 
         <Button
           component={Link}
-          to={`/bookflix/bookinfo/${bookInfo.id}`}
+          to={`/bookflix/bookinfo/${book.id}`}
           variant="contained"
           color="primary"
           sx={{

@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { Typography, TextField, Box, InputAdornment, Drawer, Hidden, Slider } from "@mui/material"
-import { LocalizationProvider } from "@mui/x-date-pickers"
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns"
-import { DatePicker } from "@mui/x-date-pickers/DatePicker"
-import SearchIcon from "@mui/icons-material/Search"
+import { Typography, Box, Drawer, Slider } from "@mui/material"
 import IconButton from "@mui/material/IconButton"
-import TuneIcon from "@mui/icons-material/Tune"
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
-import { ThemeProvider, createTheme } from "@mui/material/styles"
 
 import Header from "../../components/Header/Header"
 import BookCardResult from "./components/BookCardResult"
@@ -21,6 +15,7 @@ import { getAllAuthors } from "../../components/getAllAuthors"
 import DatePickerComponent from "./components/DatePickerComponent"
 import TextFieldForBookSearch from "./components/TextFieldForBookSearch"
 import { getBook } from "../../components/getBook"
+import { Book } from "../../components/Book"
 
 function TimSach() {
   const [allGenres, setAllGenres] = useState<string[]>([])
@@ -68,14 +63,10 @@ function TimSach() {
   const [filteredEndYear, setFilteredEndYear] = useState<number>(2030)
   const [filteredRating, setFilteredRating] = useState<number | number[]>([0, 5])
 
-  const [bookSearchedInfo_stringified, setBookSearchedInfo_stringified] = useState<Set<string>>(new Set())
-
-  function roundToNearestQuarter(value: number): number {
-    return Math.round(value * 4) / 4
-  }
+  const [bookSearchResult, setBookSearchResult] = useState<Book[]>([])
 
   const updateBookSearchedInfo = async () => {
-    setBookSearchedInfo_stringified(new Set())
+    setBookSearchResult([])
     for (const id of BookIds) {
       const book = await getBook(id)
 
@@ -86,7 +77,7 @@ function TimSach() {
       const goodDate = filteredStartYear <= book.publishyear && book.publishyear <= filteredEndYear
 
       if (goodTitle && goodGenres && goodAuthor && goodRating && goodDate) {
-        setBookSearchedInfo_stringified((oldSet) => new Set([...oldSet, JSON.stringify(book)]))
+        setBookSearchResult((oldResult) => oldResult.some((bookIn) => bookIn.id == id) ? oldResult : [...oldResult, book])
       }
     }
   }
@@ -108,8 +99,8 @@ function TimSach() {
             setIsFilterDrawerOpen={setIsFilterDrawerOpen}
           />
 
-          {[...bookSearchedInfo_stringified].map((bookResult) => (
-            <BookCardResult bookInfo={JSON.parse(bookResult)} key={JSON.parse(bookResult).id} />
+          {bookSearchResult.map((book) => (
+            <BookCardResult book={book} key={book.id} />
           ))}
         </Box>
 
