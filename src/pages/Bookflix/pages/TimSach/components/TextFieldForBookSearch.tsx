@@ -1,7 +1,6 @@
 import { TextField, InputAdornment, Hidden, IconButton } from "@mui/material"
 import SearchIcon from "@mui/icons-material/Search"
 import TuneIcon from "@mui/icons-material/Tune"
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
 
 interface Props {
   bookSearchValue: string

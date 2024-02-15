@@ -2,7 +2,7 @@ import { Card, CardMedia, CardContent, Typography, Button } from "@mui/material"
 import { Link } from "react-router-dom"
 import { Article } from "../../../../components/Article"
 
-const PostPreviewCard = ({ postInfo }: { postInfo: Article }) => {
+const ArticlePreviewCard = ({ article }: { article: Article }) => {
   return (
     <Card
       sx={{
@@ -17,7 +17,7 @@ const PostPreviewCard = ({ postInfo }: { postInfo: Article }) => {
       <CardMedia
         component="img"
         sx={{ width: { xs: "auto", sm: 200 }, objectFit: "cover" }}
-        image={postInfo.coverUrl}
+        image={article.coverUrl}
         alt="Image"
       />
       <CardContent sx={{ flexGrow: 1 }}>
@@ -27,7 +27,7 @@ const PostPreviewCard = ({ postInfo }: { postInfo: Article }) => {
           sx={{ fontSize: { xs: 15, sm: 17, lg: 20 }, fontStyle: "italic", fontWeight: 'bold' }}
           fontFamily="var(--body-font-bookflix)"
         >
-          {postInfo.title}
+          {article.title}
         </Typography>
         <Typography
           variant="subtitle1"
@@ -36,14 +36,14 @@ const PostPreviewCard = ({ postInfo }: { postInfo: Article }) => {
           sx={{ fontSize: { xs: 12, sm: 15, lg: 17 } }}
           fontFamily="var(--body-font-bookflix)"
         >
-          bởi {postInfo.author}
+          bởi {article.author}
         </Typography>
         <Typography variant="body2" component="div" sx={{ mb: 2 }}>
-          {postInfo.description}
+          {article.description}
         </Typography>
         <Button
           component={Link}
-          to={postInfo.url}
+          to={article.url}
           variant="contained"
           color="primary"
           sx={{
@@ -64,4 +64,4 @@ const PostPreviewCard = ({ postInfo }: { postInfo: Article }) => {
   )
 }
 
-export default PostPreviewCard
+export default ArticlePreviewCard

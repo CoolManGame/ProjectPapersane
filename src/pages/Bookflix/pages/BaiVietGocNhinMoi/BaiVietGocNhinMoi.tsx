@@ -11,20 +11,27 @@ import readTextFile from "../../../../store/readTextFile"
 import calcLerp from "../../../../store/calcLerp"
 
 import RenderMarkdown from "./components/RenderMarkdown"
+import { getArticle } from "../../components/getArticle"
+import { Article } from "../../components/Article"
 
 gsap.registerPlugin(ScrollTrigger)
 
 function BaiVietGocNhinMoi() {
   const { articleId } = useParams()
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-  const [articleTitle, setArticleTitle] = useState("")
-  const [articleAuthor, setArticleAuthor] = useState("")
-  const [articlePublishDate, setArticlePublishDate] = useState("")
-  const [articleAvatarURL, setArticleAvatarURL] = useState("")
-  const [articleParts, setArticleParts] = useState<string[]>([])
-  const [articleContent, setArticleContent] = useState<string>("");
-  const [scrollHeightState, setScrollHeightState] = useState(document.documentElement.scrollHeight)
+  const [article, setArticle] = useState<Article>({
+    id: "#",
+    title: "#",
+    author: "#",
+    publishdate: 0,
+    description: "#",
+    content: "#",
+    coverUrl: "#",
+    url: "#",
+  })
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const [scrollHeightState, setScrollHeightState] = useState(document.documentElement.scrollHeight)
+  
   const boxNeedsPinning = useRef(null)
 
   // screen resize listener for collecting screen width
@@ -55,20 +62,7 @@ function BaiVietGocNhinMoi() {
 
   // fetch data
   useEffect(() => {
-    readTextFile(`/bookflix/GocNhinMoi/content/${articleId}.md`).then((data) => {
-      const matterResult = matter(data);
-      setArticleTitle(matterResult.data.title);
-      setArticleAuthor(matterResult.data.author);
-      const publishDateSplitted = matterResult.data.publishdate.split("-");
-      setArticlePublishDate(`${publishDateSplitted[2]}/${publishDateSplitted[1]}/${publishDateSplitted[0]}`)
-      setArticleContent(matterResult.content);
-    })
-
-    // readTextFile(`/GocNhinMoi-articles/${articleId}/Article.txt`).then((data) => {
-    //   setArticleParts(data.split(/\r?\n/).filter((str) => str.length > 0))
-    // })
-
-    setArticleAvatarURL(`/bookflix/GocNhinMoi/images/${articleId}/articleCover.jpg`)
+    articleId && getArticle(articleId).then((data) => setArticle(data))
   }, [])
 
   // scrolltrigger to make left side stay pinned
@@ -123,7 +117,7 @@ function BaiVietGocNhinMoi() {
           </Button>
           <Box mt={{ xs: "50px", md: "10px" }} mx="auto" width={{ xs: "auto", sm: "calc(100vw - 200px)", md: "auto" }}>
             <img
-              src={articleAvatarURL}
+              src={article.coverUrl}
               style={{
                 borderRadius: "0 30px 0 0",
                 border: "10px solid rgb(232, 233, 219)",
@@ -134,17 +128,16 @@ function BaiVietGocNhinMoi() {
 
         <Box sx={{ flexBasis: { xs: "auto", md: "70%" } }}>
           <Typography variant="h3" fontFamily="var(--body-font-bookflix)" fontStyle="italic" fontWeight="bold" fontSize={{ xs: 40, md: 50 }}>
-            {articleTitle}
+            {article.title}
           </Typography>
           <Typography variant="h6" fontFamily="var(--body-font-bookflix)" fontWeight="normal">
-            {`Đăng bởi ${articleAuthor} vào ${articlePublishDate}`}
+            {`Đăng bởi ${article.author} vào ${article.publishdate}`}
           </Typography>
 
           <Box bgcolor="rgb(174, 170, 166)" height={4} my={3}></Box>
 
           <Box bgcolor=" white" p={3} display="flex" flexDirection="column" gap={3}>
-            <RenderMarkdown>{articleContent}</RenderMarkdown>
-            {/* <ArticleTxtToComponents articleParts={articleParts} /> */}
+            <RenderMarkdown>{article.content}</RenderMarkdown>
           </Box>
         </Box>
       </Box>

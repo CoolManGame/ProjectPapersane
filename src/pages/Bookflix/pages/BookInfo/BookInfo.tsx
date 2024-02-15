@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import Markdown from "react-markdown"
 import { Box, Button, Grid, Rating, Typography } from "@mui/material"
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
-import Markdown from "react-markdown"
 
 import Header from "../../components/Header/Header"
 import { Notfound } from "../../../"
 import { BookIds } from "../../../../store/bookflix/BookIds"
 import { getBook } from "../../components/getBook"
+import { Book } from "../../components/Book"
 
 const BOOK_INFO_PATH = `/bookflix/book-info`
 
@@ -18,22 +19,20 @@ const BookInfo = () => {
     return <Notfound />
   }
 
-  const [bookTitle, setBookTitle] = useState("")
-  const [bookAuthor, setBookAuthor] = useState("")
-  const [bookPublishYear, setBookPublishYear] = useState("")
-  const [bookReview, setBookReview] = useState("")
-  const [bookGenres, setBookGenres] = useState<string[]>([])
-  const [bookRating, setBookRating] = useState(0)
+  const [book, setBook] = useState<Book>({
+    id: "#",
+    title: "#",
+    author: "#",
+    genres: [],
+    publishyear: 0,
+    rating: 0,
+    review: "#",
+    coverUrl: "#",
+    url: "#",
+  });
 
   useEffect(() => {
-    getBook(bookId as string).then((book) => {
-      setBookTitle(book.title)
-      setBookGenres(book.genres)
-      setBookPublishYear(book.publishyear.toString())
-      setBookAuthor(book.author)
-      setBookRating(book.rating)
-      setBookReview(book.review)
-    })
+    bookId && getBook(bookId).then((book) => setBook(book))
   }, [])
 
   return (
@@ -77,7 +76,7 @@ const BookInfo = () => {
                 color="var(--bookflix-logo-color)"
                 align="center"
               >
-                {bookTitle}
+                {book.title}
               </Typography>
             </Grid>
 
@@ -85,14 +84,14 @@ const BookInfo = () => {
             <Grid item alignSelf={{ xs: "center", sm: "center" }}>
               <Typography variant="h5" color="black" fontFamily="var(--body-font-bookflix)" fontSize={{ sm: 20, md: 25 }}>
                 <span style={{ fontWeight: "bold" }}>Tác giả: </span>
-                {bookAuthor}
+                {book.author}
               </Typography>
             </Grid>
 
             {/* Book publish date */}
             <Grid item alignSelf={{ xs: "center", sm: "center" }}>
               <Typography variant="h5" color="black" fontFamily="var(--body-font-bookflix)" fontSize={{ sm: 20, md: 25 }}>
-                <span style={{ fontWeight: "bold" }}>Năm phát hành: </span> {bookPublishYear}
+                <span style={{ fontWeight: "bold" }}>Năm phát hành: </span> {book.publishyear}
               </Typography>
             </Grid>
 
@@ -103,7 +102,7 @@ const BookInfo = () => {
                   Thể loại:
                 </Typography>
 
-                {bookGenres.map((genre) => (
+                {book.genres.map((genre) => (
                   <Typography
                     key={genre}
                     variant="h6"
@@ -131,7 +130,7 @@ const BookInfo = () => {
                 <Typography variant="h5" fontFamily="var(--body-font-bookflix)" fontStyle="italic" color="black" fontSize={{ md: 25, lg: 30 }}>
                   Đánh giá:{" "}
                 </Typography>
-                <Rating value={bookRating} precision={0.25} readOnly sx={{ fontSize: { md: 30, lg: 40 } }} />
+                <Rating value={book.rating} precision={0.25} readOnly sx={{ fontSize: { md: 30, lg: 40 } }} />
               </Box>
             </Grid>
           </Grid>
@@ -165,7 +164,7 @@ const BookInfo = () => {
                 },
               }}
             >
-              {bookReview}
+              {book.review}
             </Markdown>
           </Box>
         </Box>

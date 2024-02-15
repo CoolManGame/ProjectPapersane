@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Box, Typography } from "@mui/material"
 import Markdown from "react-markdown"
+import calcLerp from "../../../../../store/calcLerp"
 
 interface RenderMarkdownProps {
   children: any
@@ -39,23 +40,23 @@ const RenderMarkdown: React.FC<RenderMarkdownProps> = ({ children }) => {
   }, [])
 
   const calculateImageWidth = () => {
+    let minScreenWidth, maxWidth, minWidth, maxScreenWidth
+
     if (screenWidth >= 900) {
-      const maxWidth = 800
-      const minWidth = 400
-      const maxScreenWidth = 1920
-      const minScreenWidth = 900
-      // formula to make pic width scale linearly with screen width
-      const width = ((screenWidth - minScreenWidth) / (maxScreenWidth - minScreenWidth)) * (maxWidth - minWidth) + minWidth
-      return Math.round(width)
+      minWidth = 400
+      maxWidth = 800
+      minScreenWidth = 900
+      maxScreenWidth = 1920
     } else {
-      const maxWidth = 500
-      const minWidth = 300
-      const maxScreenWidth = 750
-      const minScreenWidth = 320
-      // formula to make pic width scale linearly with screen width
-      const width = ((screenWidth - minScreenWidth) / (maxScreenWidth - minScreenWidth)) * (maxWidth - minWidth) + minWidth
-      return Math.round(width)
+      minWidth = 300
+      maxWidth = 500
+      minScreenWidth = 320
+      maxScreenWidth = 750
     }
+
+    const lerp = calcLerp(minScreenWidth, minWidth, maxScreenWidth, maxWidth)
+    const width = lerp(screenWidth)
+    return Math.round(width)
   }
 
   return (

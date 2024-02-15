@@ -1,3 +1,4 @@
+// return a function that interpolates from (x1, y1) to (x2, y2)
 const calcLerp = (x1 : number, y1 : number, x2 : number, y2 : number) => {
     const m : number = (y2 - y1) / (x2 - x1)
     const b : number = y1 - m * x1

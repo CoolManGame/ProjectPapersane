@@ -1,5 +1,4 @@
 import matter from "gray-matter"
-import React from "react"
 
 import { Book } from "./Book"
 import readTextFile from "../../../store/readTextFile"

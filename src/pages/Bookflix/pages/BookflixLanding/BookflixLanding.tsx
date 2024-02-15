@@ -1,17 +1,25 @@
-import React, { useEffect, useState } from "react"
-import { Typography, Button, Box, Grid } from "@mui/material"
-import Header from "../../components/Header/Header"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay } from "swiper"
-import "swiper/css"
-import "swiper/css/autoplay"
+import { useEffect, useState } from "react";
+import { Typography, Button, Box, Grid } from "@mui/material";
 
-import { BookIds } from "../../../../store/bookflix/BookIds"
-import { GocNhinMoiArticleIds } from "../../../../store/bookflix/GocNhinMoiArticleIds"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import "swiper/css";
+import "swiper/css/autoplay";
 
-import readTextFile from "../../../../store/readTextFile"
-import BookSliderBox from "./components/ItemSliderBox/ItemSliderBox"
-import ItemSlider from "./components/ItemSlider/ItemSlider"
+import Header from "../../components/Header/Header";
+import BookSliderBox from "./components/ItemSliderBox/ItemSliderBox";
+import ItemSlider from "./components/ItemSlider/ItemSlider";
+
+import { BookIds } from "../../../../store/bookflix/BookIds";
+import { GocNhinMoiArticleIds } from "../../../../store/bookflix/GocNhinMoiArticleIds";
+
+import readTextFile from "../../../../store/readTextFile";
+
+const getDaysSinceDate = (targetDate : Date) => {
+  const currentDate = new Date();
+  const timeDifference = currentDate.getTime() - targetDate.getTime();
+  return Math.round(timeDifference / (1000 * 60 * 60 * 24));
+}
 
 function BookflixLanding() {
   const bookCoversSurpriseMe = BookIds.map((id) => `/bookflix/book-info/cover/${id}.png`)
@@ -24,9 +32,7 @@ function BookflixLanding() {
     })
   }, [])
 
-  const date0 = new Date(2023, 6, 13)
-  const daysSinceDate0 = Math.round((new Date().getTime() - date0.getTime()) / (1000*60*60*24))
-  const quoteIdx = daysSinceDate0 % 100
+  const quoteIdx = getDaysSinceDate(new Date(2023, 6, 13)) % 100
 
   return (
     <Box bgcolor="var(--bookflix-background)" minHeight="100vh" height="100%" width="100%">
@@ -123,9 +129,9 @@ function BookflixLanding() {
           mx={2}
           fontSize={{ xs: 20, lg: 25 }}
         >
-          {quoteTxtLines[quoteIdx * 2]}
+          {quoteTxtLines[quoteIdx * 2]} {/* quote content */}
           <br />
-          {`- ${quoteTxtLines[quoteIdx * 2 + 1]}`}
+          {`- ${quoteTxtLines[quoteIdx * 2 + 1]}`} {/* quote author */}
         </Typography>
       </Box>
     </Box>

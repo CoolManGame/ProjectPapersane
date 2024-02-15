@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
-import { Typography, Box, Drawer, Slider } from "@mui/material"
-import IconButton from "@mui/material/IconButton"
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { Typography, Box, Drawer, Slider } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-import Header from "../../components/Header/Header"
-import BookCardResult from "./components/BookCardResult"
-import FilterAutocomplete from "./components/FilterAutocomplete"
-import FilterAutocompleteSingular from "./components/FilterAutocompleteSingular"
+import Header from "../../components/Header/Header";
+import BookCard from "./components/BookCard";
+import FilterAutocomplete from "./components/FilterAutocomplete";
+import FilterAutocompleteSingular from "./components/FilterAutocompleteSingular";
+import DatePickerComponent from "./components/DatePickerComponent";
+import TextFieldForBookSearch from "./components/TextFieldForBookSearch";
 
-import { BookIds } from "../../../../store/bookflix/BookIds"
-import { getAllGenres } from "../../components/getAllGenres"
-import { getAllAuthors } from "../../components/getAllAuthors"
-import DatePickerComponent from "./components/DatePickerComponent"
-import TextFieldForBookSearch from "./components/TextFieldForBookSearch"
-import { getBook } from "../../components/getBook"
-import { Book } from "../../components/Book"
+import { BookIds } from "../../../../store/bookflix/BookIds";
+import { getAllGenres } from "../../components/getAllGenres";
+import { getAllAuthors } from "../../components/getAllAuthors";
+import { getBook } from "../../components/getBook";
+import { Book } from "../../components/Book";
 
 function TimSach() {
   const [allGenres, setAllGenres] = useState<string[]>([])
@@ -23,19 +23,23 @@ function TimSach() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const genres = await getAllGenres();
+      const [genres, authors] = await Promise.all([getAllGenres(), getAllAuthors()]);
       setAllGenres(genres);
-      
-      const authors = await getAllAuthors();
       setAllAuthors(authors);
     };
     
     fetchData();
   }, []);
-
+  
   const { searchQueryInURL } = useParams()
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
   const [bookSearchValue, setBookSearchValue] = useState(searchQueryInURL ? searchQueryInURL : "")
+
+  const [filteredGenres, setFilteredGenres] = useState<string[]>([])
+  const [filteredAuthor, setFilteredAuthor] = useState<string>("")
+  const [filteredStartYear, setFilteredStartYear] = useState<number>(1900)
+  const [filteredEndYear, setFilteredEndYear] = useState<number>(2030)
+  const [filteredRating, setFilteredRating] = useState<number | number[]>([0, 5])
 
   const handleGenreChange = (event: any, value: string[]) => {
     setFilteredGenres(value)
@@ -56,12 +60,6 @@ function TimSach() {
   const handleFilteredRatingChange = (event: any, value: number | number[]) => {
     setFilteredRating(value)
   }
-
-  const [filteredGenres, setFilteredGenres] = useState<string[]>([])
-  const [filteredAuthor, setFilteredAuthor] = useState<string>("")
-  const [filteredStartYear, setFilteredStartYear] = useState<number>(1900)
-  const [filteredEndYear, setFilteredEndYear] = useState<number>(2030)
-  const [filteredRating, setFilteredRating] = useState<number | number[]>([0, 5])
 
   const [bookSearchResult, setBookSearchResult] = useState<Book[]>([])
 
@@ -100,7 +98,7 @@ function TimSach() {
           />
 
           {bookSearchResult.map((book) => (
-            <BookCardResult book={book} key={book.id} />
+            <BookCard book={book} key={book.id} />
           ))}
         </Box>
 

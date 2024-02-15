@@ -2,7 +2,7 @@ import { Card, CardMedia, CardContent, Typography, Rating, Button } from "@mui/m
 import { Link } from "react-router-dom"
 import { Book } from "../../../components/Book"
 
-const BookCardResult = ({ book }: { book: Book }) => {
+const BookCard = ({ book }: { book: Book }) => {
   return (
     <Card
       sx={{
@@ -58,4 +58,4 @@ const BookCardResult = ({ book }: { book: Book }) => {
   )
 }
 
-export default BookCardResult
+export default BookCard
