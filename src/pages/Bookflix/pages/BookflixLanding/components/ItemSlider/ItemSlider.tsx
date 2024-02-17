@@ -1,9 +1,10 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
+import { Scrollbar } from 'swiper';
 
 // Import Swiper styles
 import "swiper/css"
-import "swiper/css/autoplay"
+import "swiper/css/scrollbar"
 
 import { Card, CardContent, CardMedia, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
@@ -44,9 +45,9 @@ const ItemSlider = ({ ids, cardColor, forBook }: { ids: string[]; cardColor: str
   }, [])
 
   return (
-    <Swiper breakpoints={swiperBreakpoint}>
+    <Swiper breakpoints={swiperBreakpoint} grabCursor={true} modules={[Scrollbar]} scrollbar={true} spaceBetween={10}>
       {info.map((item) => (
-        <SwiperSlide key={item.id}>
+        <SwiperSlide key={item.id} style={{paddingBottom: 30}}>
           <Link to={item.url}>
             <Card
               elevation={0}
