@@ -22,8 +22,6 @@ const getDaysSinceDate = (targetDate : Date) => {
 }
 
 function BookflixLanding() {
-  const bookCoversSurpriseMe = BookIds.map((id) => `/bookflix/book-info/cover/${id}.png`)
-
   const [quoteTxtLines, setQuoteTxtLines] = useState<string[]>([])
 
   useEffect(() => {
@@ -59,10 +57,10 @@ function BookflixLanding() {
 
         <Grid item xs={15} sm={15} md={8} lg={6} mt={10}>
           <Swiper slidesPerView={1} loop autoplay={{ delay: 2500 }} modules={[Autoplay]} noSwiping={true} noSwipingClass="swiper-slide">
-            {bookCoversSurpriseMe.map((bookCoverURL) => (
-              <SwiperSlide key={bookCoverURL}>
+            {BookIds.map((id) => (
+              <SwiperSlide key={id}>
                 <img
-                  src={bookCoverURL}
+                  src={`/bookflix/book-info/cover/${id}.png`}
                   style={{
                     width: "100%",
                     height: "auto",
