@@ -96,9 +96,9 @@ function BookflixLanding() {
         </Grid>
       </Grid>
 
-      <BookSliderBox title="Top rated" BookSliderComponent={<ItemSlider ids={BookIds} cardColor="rgb(204, 223, 230)" forBook={true}/>} />
+      <BookSliderBox title="Top rated" ItemSliderComponent={<ItemSlider ids={BookIds} cardColor="rgb(204, 223, 230)" forBook={true}/>} />
 
-      <BookSliderBox title="Recommended for you" BookSliderComponent={<ItemSlider ids={GocNhinMoiArticleIds} cardColor="rgb(210, 239, 173)" forBook={false}/>} />
+      <BookSliderBox title="Recommended for you" ItemSliderComponent={<ItemSlider ids={GocNhinMoiArticleIds} cardColor="rgb(210, 239, 173)" forBook={false}/>} />
 
       <Typography
         variant="h3"

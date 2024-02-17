@@ -2,10 +2,10 @@ import { Box, Typography } from "@mui/material"
 
 interface Prop {
   title: string
-  BookSliderComponent: React.ReactNode
+  ItemSliderComponent: React.ReactNode
 }
 
-const ItemSliderBox = ({ title, BookSliderComponent }: Prop) => {
+const ItemSliderBox = ({ title, ItemSliderComponent }: Prop) => {
   return (
     <Box p={2} ml={5} mr={5} mt={7}>
       <Typography
@@ -20,7 +20,7 @@ const ItemSliderBox = ({ title, BookSliderComponent }: Prop) => {
         {title}
       </Typography>
 
-      {BookSliderComponent}
+      {ItemSliderComponent}
     </Box>
   )
 }

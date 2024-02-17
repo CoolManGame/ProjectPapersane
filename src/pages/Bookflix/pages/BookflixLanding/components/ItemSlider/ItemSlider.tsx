@@ -37,7 +37,7 @@ const ItemSlider = ({ ids, cardColor, forBook }: { ids: string[]; cardColor: str
 
   useEffect(() => {
     ids.forEach((id) => {
-      ;(forBook ? getBook(id) : getArticle(id)).then((item) => {
+      (forBook ? getBook(id) : getArticle(id)).then((item) => {
         setInfo((oldInfo) => oldInfo.some((itemIn) => itemIn.id == item.id) ? oldInfo : [...oldInfo, item])
       })
     })
@@ -46,7 +46,7 @@ const ItemSlider = ({ ids, cardColor, forBook }: { ids: string[]; cardColor: str
   return (
     <Swiper breakpoints={swiperBreakpoint}>
       {info.map((item) => (
-        <SwiperSlide key={`${item.id}`}>
+        <SwiperSlide key={item.id}>
           <Link to={item.url}>
             <Card
               elevation={0}
