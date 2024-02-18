@@ -15,6 +15,8 @@ import { useEffect, useState } from "react"
 import { Article } from "../../../../components/Article"
 import { getArticle } from "../../../../components/getArticle"
 
+import CustomLink from "../CustomLink/CustomLink"
+
 const ItemSlider = ({ ids, cardColor, forBook }: { ids: string[]; cardColor: string; forBook: boolean }) => {
   const [info, setInfo] = useState<(Book | Article)[]>([])
 
@@ -47,27 +49,8 @@ const ItemSlider = ({ ids, cardColor, forBook }: { ids: string[]; cardColor: str
   return (
     <Swiper breakpoints={swiperBreakpoint} grabCursor={true} modules={[Scrollbar]} scrollbar={true} spaceBetween={10}>
       {info.map((item) => (
-        <SwiperSlide key={item.id} style={{paddingBottom: 30}}>
-          <Link to={item.url}>
-            <Card
-              elevation={0}
-              sx={{
-                maxWidth: 200,
-                backgroundColor: cardColor,
-                padding: 1,
-              }}
-            >
-              <CardMedia component="img" image={item.coverUrl} alt={item.title} />
-              <CardContent>
-                <Typography variant="h5" fontFamily="var(--body-font-bookflix)" fontWeight="500">
-                  {item.title}
-                </Typography>
-                <Typography variant="subtitle1" fontFamily="var(--body-font-bookflix)">
-                  {item.author}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Link>
+        <SwiperSlide key={item.id} style={{paddingBottom: 30, paddingTop: 30}}>
+          <CustomLink item={item} cardColor={cardColor} />
         </SwiperSlide>
       ))}
     </Swiper>

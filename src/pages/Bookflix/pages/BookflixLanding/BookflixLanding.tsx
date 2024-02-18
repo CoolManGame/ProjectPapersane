@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 import Header from "../../components/Header/Header";
-import BookSliderBox from "./components/ItemSliderBox/ItemSliderBox";
+import ItemSliderBox from "./components/ItemSliderBox/ItemSliderBox";
 import ItemSlider from "./components/ItemSlider/ItemSlider";
 
 import { BookIds } from "../../../../store/bookflix/BookIds";
@@ -96,9 +96,9 @@ function BookflixLanding() {
         </Grid>
       </Grid>
 
-      <BookSliderBox title="Top rated" ItemSliderComponent={<ItemSlider ids={BookIds} cardColor="rgb(204, 223, 230)" forBook={true}/>} />
+      <ItemSliderBox title="Top rated" ItemSliderComponent={<ItemSlider ids={BookIds} cardColor="rgb(204, 223, 230)" forBook={true}/>} />
 
-      <BookSliderBox title="Recommended for you" ItemSliderComponent={<ItemSlider ids={GocNhinMoiArticleIds} cardColor="rgb(210, 239, 173)" forBook={false}/>} />
+      <ItemSliderBox title="Recommended for you" ItemSliderComponent={<ItemSlider ids={GocNhinMoiArticleIds} cardColor="rgb(210, 239, 173)" forBook={false}/>} />
 
       <Typography
         variant="h3"
