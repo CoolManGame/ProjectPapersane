@@ -76,7 +76,7 @@ const BookInfo = () => {
                 color="var(--bookflix-logo-color)"
                 align="center"
               >
-                {book.title}
+                {book.title.toUpperCase()}
               </Typography>
             </Grid>
 
