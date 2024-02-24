@@ -38,7 +38,9 @@ function BookflixLanding() {
 
       <Grid container columns={24} justifyContent="center" spacing={10}>
         <Grid item xs={22} sm={22} md={14} lg={10} alignSelf="center">
+          
           <Typography
+            position="relative"
             variant="h4"
             align="center"
             fontFamily="var(--review-font-bookflix)"
@@ -52,6 +54,8 @@ function BookflixLanding() {
             Yêu sách từ đầu sao thật khó
             <br />
             Đừng từ bỏ, có Bookflix lo!
+            <img src="/bookflix/ui-pics/Flower1_BookflixLanding.png" width={50} style={{position: "absolute", top: "-15px", right: "-15px"}}/>
+            <img src="/bookflix/ui-pics/Pencil_BookflixLanding.png" width={50} style={{position: "absolute", bottom: "-10px", left: "-10px", transform: "rotateX(180deg)"}}/>
           </Typography>
         </Grid>
 
@@ -112,8 +116,9 @@ function BookflixLanding() {
         QUOTE OF THE DAY
       </Typography>
 
-      <Box display="flex" justifyContent="space-evenly" alignItems="center" mt={5}>
+      <Box mt={15} position="relative" px={2}>
         <Typography
+          position="relative"
           variant="h5"
           align="center"
           fontFamily="var(--body-font-bookflix)"
@@ -123,14 +128,20 @@ function BookflixLanding() {
           color="black"
           borderRadius="30px"
           p={5}
-          mb={5}
-          mx={2}
+          mx="auto"
+          width="fit-content"
+          max-width="100%"
           fontSize={{ xs: 20, lg: 25 }}
+          zIndex={100}
         >
           {quoteTxtLines[quoteIdx * 2]} {/* quote content */}
           <br />
           {`- ${quoteTxtLines[quoteIdx * 2 + 1]}`} {/* quote author */}
         </Typography>
+        <img src="/bookflix/ui-pics/Flower2_BookflixLanding.png" width={300} style={{position: "absolute", margin: "0 auto", left: "0", right: "0", zIndex: "9", top: "-100px"}}/>
+      </Box>
+
+      <Box bgcolor="var(--bookflix-background)" height="20px">
       </Box>
     </Box>
   )
